@@ -23,10 +23,12 @@ Citizen.CreateThread(function()
 						if Config.Vehicles[model].kick then
 							TaskLeaveVehicle(playerPed, vehicle, 0)
 							TriggerEvent('esx:showNotification', Config.Messages["kick"])
+							TriggerEvent("r3-antivehicletheft:onKick")
 						else
 							SetVehicleEngineOn(vehicle, false, true, false)
 							TriggerEvent('esx:showNotification', Config.Messages["disable"])
 							interval = Config.Interval["disable"]
+							TriggerEvent("r3-antivehicletheft:onDisable")
 						end
 					end
 				end

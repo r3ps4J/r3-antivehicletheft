@@ -8,6 +8,17 @@ With this resource you can prevent players from using certain vehicles. Useful i
 * Either kick or disable a vehicle
 * Set interval and messages
 
+## Events
+When a player gets kicked out of a vehicle the following event will be triggered on the client side:
+```
+r3-antivehicletheft:onKick
+```
+And when the vehicle gets disabled this event will be triggered on the client side:
+```
+r3-antivehicletheft:onDisable
+```
+You can use these events to do actions after it. Probably useful if you want to add logs or something.
+
 ## Dependencies
 * [ESX](https://github.com/esx-framework/es_extended/tree/v1-final) or [EXM](https://github.com/extendedmode/extendedmode)
 
